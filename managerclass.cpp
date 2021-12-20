@@ -726,4 +726,3 @@ void SkuManager::resetskubrowser(QTextBrowser* qtextbrowser)
 	}
 	skumap_.clear();
 }
-//branch1

@@ -98,12 +98,27 @@ private:
 	std::map<int, DineOrder*> dineorderlist_;
 	std::map<int, DeliverOrder*> deliverorderlist_;
 public:
+	Cart cart;
 	void insertdineorder(DineOrder* dineorder);
 	void printdineorder(DineOrder* dineorder, QTextBrowser* dineorderbrowser);
 	void uploaddineorder(DineOrder* dineorder);
 	void insertdeliverorder(DeliverOrder* deliverorder);
 	void printdeliverorder(DeliverOrder* deliverorder, QTextBrowser* deliverorderbrowser);
 	void uploaddeliverorder(DeliverOrder* deliverorder);
-	//testpurpose
-	//testpurpose2
+};
+class Cart
+{
+private:
+	map<int, OrderDetail*> tempcartmap_;
+	map<int, OrderDetail*> cartmap_;
+public:
+	void addtocart(int skuno,QTextBrowser* qtextbrowser);
+	void clearcart(QTextBrowser* qtextbrowser);
+};
+class Menu
+{
+private:
+	std::map<int, std::array<std::string, 5>> skumap_;
+public:
+	void refreshmenu(QTextBrowser* qtextbrowser);
 };
